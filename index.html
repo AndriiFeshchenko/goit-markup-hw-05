@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web studio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
@@ -40,9 +41,8 @@
   <section class="hero cellar cellar-hero">
     <div class="container-hero">
       <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-      <button class="btn" type="button"> Заказать услугу</button>
-    </div>
-  </section>
+      <button class="btn primary-btn" type="button" data-modal-open> Заказать услугу</button>
+      </section>
   <!--features-->
   <section class="section-features">
     <h2 style="display: none;" id="features">Особенности</h2>
@@ -84,10 +84,19 @@
     <div class="container">
       <h3 class="section-title">Чем мы занимаемся</h3>
       <div class="container-activity">
+        <div class="thumb">
         <img src="./images/img1.jpg" alt="close up image programer working his desk office" />
+      <p class="name">Десктопные приложения</p>
+      </div>
+      <div class="thumb">
         <img src="./images/img2.jpg"
           alt="web ui designers are developing application smartphones team creators is working interface mobile phones" />
+          <p class="name">Мобильные приложения</p>
+          </div>
+          <div class="thumb">
         <img src="./images/img3.jpg" alt="creative artist web design with working colour selection graphic tablet" />
+        <p class="name">Дизайнерские решения</p>
+        </div>
       </div>
     </div>
 
@@ -371,6 +380,12 @@
   </div>
   </div>
   </footer>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="btn-close" data-modal-close>X</button>
+  </div>
+</div>
+ <script src="./js/modal.js"></script>
 </body>
 
 </html>

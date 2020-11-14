@@ -50,6 +50,18 @@ img {
 
 .nav .link.current {
   color: var(--blue);
+  position: relative;
+}
+.current:after {
+  content: "";
+  display: block;
+  width: 110%;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 2px;
+  position: absolute;
+  bottom: -32px;
+  left: -3px;
 }
 .logo {
   font-family: Raleway;
@@ -100,6 +112,9 @@ img {
   margin-right: 10px;
   fill: var(--grey);
   vertical-align: middle;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-contact-smart {
   width: 10px;
@@ -107,6 +122,9 @@ img {
   margin-right: 10px;
   fill: var(--grey);
   vertical-align: middle;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contacts-link:hover .icon-contact,
@@ -120,6 +138,9 @@ img {
 .icon-contacts-link {
   text-decoration: none;
   color: inherit;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-contacts-link:hover,
 .icon-contacts-link:focus {
@@ -141,6 +162,9 @@ img {
 .link {
   color: inherit;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail-link {
   color: var(--blue);
@@ -228,6 +252,9 @@ img {
   line-height: 1.62;
   letter-spacing: 0.03em;
   color: var(--black);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn {
@@ -248,6 +275,9 @@ img {
   margin-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
+}
+.primary-btn {
+  cursor: pointer;
 }
 
 .btn-position {
@@ -477,6 +507,28 @@ img {
   margin-top: 0px;
   padding-bottom: 94px;
 }
+.thumb {
+  position: relative;
+  margin: 0;
+}
+.thumb .name {
+  font-family: "Roboto";
+  width: 370px;
+  height: 70px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 224px;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--white);
+}
 
 .container-activity img {
   margin-right: 30px;
@@ -554,12 +606,18 @@ img {
   height: 20px;
   list-style: none;
   fill: var(--social-links);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons-footer-svg {
   width: 20px;
   height: 20px;
   list-style: none;
   fill: var(--white);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons {
   display: flex;
@@ -588,6 +646,9 @@ img {
   height: 44px;
   background-color: var(--white);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons-link-footer {
   display: flex;
@@ -597,6 +658,9 @@ img {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons-link:hover .social-icons-svg,
 .social-icons-link:focus .social-icons-svg {
@@ -656,9 +720,15 @@ img {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  transition-property: color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-clients {
   fill: currentColor;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-link:hover .icon-clients,
 .icon-link:focus .icon-clients {
@@ -762,6 +832,9 @@ img {
   color: var(--white);
   font-style: normal;
   font-weight: normal;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connection {
@@ -773,6 +846,9 @@ img {
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text-connect {
   font-family: Roboto;
@@ -806,4 +882,94 @@ img {
 }
 .link-element {
   font-size: 16px;
+}
+.product-overlay {
+  position: relative;
+}
+.product-text {
+  display: block;
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: var(--blue);
+  color: var(--white);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+}
+
+.element:hover .product-text {
+  transform: translateY(0);
+  overflow: visible;
+  opacity: 1;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(25, 28, 38, 0.8);
+  z-index: 100;
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.is-hidden .modal {
+  transform: translate(-50%, 0%) scale(0.5);
+}
+
+.modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  width: 100%;
+  max-width: 528px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid var(--ddark-bg);
+  background-color: var(--dark-bg);
+  color: var(--black);
+  cursor: pointer;
+  transition: transform 250ms 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
