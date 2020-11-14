@@ -967,9 +967,9 @@ img {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 2px solid var(--ddark-bg);
-  background-color: var(--dark-bg);
-  color: var(--black);
+  border: 2px solid var(--white);
+  background-color: var(--blue);
+  color: var(--white);
   cursor: pointer;
   transition: transform 250ms 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
